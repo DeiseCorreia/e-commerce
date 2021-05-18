@@ -8,7 +8,7 @@
 </head>
 <body>
     <form method="post" action="cliente.php">
-    cliente
+    --cliente
         
         <input type="submit" value="enviar"></br>
     </form>
