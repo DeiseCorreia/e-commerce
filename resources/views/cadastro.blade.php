@@ -1,16 +1,14 @@
+
+<?php include "inicio.blade.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>.Net Eletronics</title>
+    <title>Document</title>
 </head>
 <body>
-    <form method="post" action="cliente.php">
-    --cliente
-        
-        <input type="submit" value="enviar"></br>
-    </form>
+    <h1>cadastro</h1>
 </body>
 </html>
