@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('inicio');
+    return view('produtos');
 });
 
 Route::get('/categoria', function (){
@@ -27,4 +27,6 @@ Route::get('/cadastro', function (){
 Route::get('/contato', function (){
     return view('contato');
   });
-
+  Route::get('/produtos', function (){
+    return view('produtos');
+  });
