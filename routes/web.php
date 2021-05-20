@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::match(['get','post'] , '/', [ProdutoController::class, 'index'])//pode dar erro com o . de concatenação
+  ->name('inicio');
+
+  Route::match(['get','post'] , '/categoria', [ProdutoController::class, 'categoria'])//pode dar erro com o . de concatenação
+  ->name('categoria');
+
+  Route::match(['get','post'] , '/cadastro', [ClienteController::class, 'cadastro'])//pode dar erro com o . de concatenação
+  ->name('cadastro');
+
+  // Route::match(['get','post'] , '/produto', [ClienteController::class, 'cadastro'])//pode dar erro com o . de concatenação
+  // ->name('cadastro');
+  
+
+
+/*
 Route::get('/', function () {
     return view('produtos');
 });
@@ -29,4 +46,4 @@ Route::get('/contato', function (){
   });
   Route::get('/produtos', function (){
     return view('produtos');
-  });
+  });*/

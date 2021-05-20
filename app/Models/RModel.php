@@ -1,16 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class RModel extends Model
 {
-   use HasFactory;
+  // use HasFactory;
 
 
    protected $primaryKey = "id";
-   public $timespatams =true; //criando e atualizando o _at
+   public $timestamps =true; //criando e atualizando o _at
 
    public $incremeting = true;
    protected $fillable = [];
@@ -21,7 +21,7 @@ class RModel extends Model
    }
    public function save(array $options = []){
       try{
-          if(!this->beforeSave()){//se não existir
+          if(!$this->beforeSave()){//se não existir
                return false; //retorne falso
           }
 

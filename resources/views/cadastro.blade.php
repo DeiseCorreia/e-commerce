@@ -1,5 +1,4 @@
 
- 
  @extends('inicio')
 @section('conteudo')
 <form action="" method="post">
