@@ -18,18 +18,24 @@ use App\Http\Controllers\ClienteController;
 Route::match(['get','post'] , '/', [ProdutoController::class, 'index'])//pode dar erro com o . de concatenação
   ->name('inicio');
 
-  Route::match(['get','post'] , '/categoria', [ProdutoController::class, 'categoria'])//pode dar erro com o . de concatenação
+Route::match(['get','post'] , '/categoria', [ProdutoController::class, 'categoria'])//pode dar erro com o . de concatenação
   ->name('categoria');
+  Route::match(['get','post'] , '{idcategoria}/categoria', [ProdutoController::class, 'categoria'])//pode dar erro com o . de concatenação
+  ->name('categoria_id');
 
-  Route::match(['get','post'] , '/cadastro', [ClienteController::class, 'cadastro'])//pode dar erro com o . de concatenação
+Route::match(['get','post'] , '/cadastro', [ClienteController::class, 'cadastro'])//pode dar erro com o . de concatenação
   ->name('cadastro');
-
-  // Route::match(['get','post'] , '/produto', [ClienteController::class, 'cadastro'])//pode dar erro com o . de concatenação
-  // ->name('cadastro');
+  Route::match(['get','post'] , '/contato', [ClienteController::class, 'contato'])//pode dar erro com o . de concatenação
+  ->name('contato');
+//propriedade match(posso passar varios protocolos http)
   
 
 
-/*
+
+
+
+
+  /*
 Route::get('/', function () {
     return view('produtos');
 });

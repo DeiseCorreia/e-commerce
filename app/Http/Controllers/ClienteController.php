@@ -11,7 +11,15 @@ class ClienteController extends Controller
       //echo "Pagina Cliente";
       $dta=[];
 
-       return view("inicio",$dta);//é tipo como eu colocasse um include,no caso seria para incluir essa função que está sendo executada na pagina inicial,no
+      return view("cadastro",$dta);//é tipo como eu colocasse um include,no caso seria para incluir essa função que está sendo executada na pagina inicial,no
+       //caso a de inicio
+   }
+
+   public function contato(Request $request){
+      //echo "Pagina Cliente";
+      $dta=[];
+
+      return view("contato",$dta);//é tipo como eu colocasse um include,no caso seria para incluir essa função que está sendo executada na pagina inicial,no
        //caso a de inicio
    }
 

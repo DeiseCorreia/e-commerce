@@ -1,19 +1,23 @@
 @extends('inicio')
 @section('conteudo')
-<div class="col -3 mb-3">
-            <div class="card">
-                <img alt="img-celular"src="{{ asset('imagens/telefone.jpg')}}" class="card-img-top"/>
-                <div class="card-body">
-                    <h6 class="card-title">Celular 01</h6>
-                    <a href="#" class="btn btn-sm btn-secondary">Adicionar Item</a><!--em breve add-->
+
+@if(isset($list))
+    @foreach($list as $prod)
+        <div class="col -3 mb-3">
+                <div class="card">
+                    <img alt="img-celular"src="{{ asset($prod->foto)}}" class="card-img-top"/>
+                    <div class="card-body">
+                        <h6 class="card-title">{{$prod->$nome}} - R$ {{$prod->valor}}</h6>
+                        <a href="#" class="btn btn-sm btn-secondary">Adicionar Item</a><!--em breve add-->
+                    </div>
                 </div>
-            </div>
         </div>
-    </div>
-    <div class="container">
-        <!-- identado(essa parte,por enquanto) -->
-        <!-- <div class="col -3 mb-3"> -->
-            <!-- <div class="card"> 
+    @endforeach
+@endif 
+   <!--<div class="container">-->
+         <!--identado(essa parte,por enquanto) -->
+         <!--<div class="col -3 mb-3">
+             <div class="card"> 
                 <img alt="img-computador"src="{{ asset('imagens/computador.jpg') }}" class="card-img-top"/>
                 <h6 class="card-title">Computador 01</h6>
                 <a href="#" class="btn btn-sm btn-secondary">Adicionar Item</a>
@@ -49,5 +53,5 @@
                 <a href="#" class="btn btn-sm btn-secondary">Adicionar Item</a>
             </div>
         </div>
-    </div>-->
+    </div>
     @endsection

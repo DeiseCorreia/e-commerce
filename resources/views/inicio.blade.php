@@ -54,12 +54,12 @@ img {
         <div class="collapse navbar-collapse"></br>
             <div class="navbar-nav">
                 <ul>
-                    <li><a class="nav-link"href="{{ route('home')}}">Home </a></li>
-                    <li><a class="nav-link" href="{{ route('categoria')}}">Categoria</a></li><!--tô tendo algumas problemas com as routes-->
-                    <li><a class="nav-link"href="{{ route('cadastro')}}">Cadastro</a></li><!--{{ route('')}}-->
-                    <!-- <li><a class="nav-link"href="{{ route('contato')}}">Contato</a></li> -->
+                    <li><a class="nav-link" href="{{ route('inicio') }}">Home </a></li>
+                    <li><a class="nav-link" href="{{ route('categoria') }}">Categoria</a></li>
+                    <li><a class="nav-link" href="{{ route('cadastro') }}">Cadastro</a></li>
+                     <li><a class="nav-link" href="{{ route('contato') }}">Contato</a></li>
                     <!--criar uma li para produtos-->
-                    <!-- <li><a class="nav-link" href="{{ route('produto')}}">Produtos</a></li> -->
+                     <!--<li><a class="nav-link">Produtos</a></li> -->
                 </ul>
             </div>
         </div>
@@ -67,11 +67,15 @@ img {
         <a alt="carrinho" href="#" class="btn btn-sm"><i class="fa fa-shopping-cart"></a>
     </nav>
     <div class="container">
+
+    
+    </div>
         
     @yield('conteudo')
     <div class="rodape">
      <!-- @Net Eletronics - Deise Correia -->
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> </body>
+integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
+</body>
 </html>
