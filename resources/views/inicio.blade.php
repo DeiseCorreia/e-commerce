@@ -54,20 +54,22 @@ img {
         <div class="collapse navbar-collapse"></br>
             <div class="navbar-nav">
                 <ul>
-                    <li><a class="nav-link" href="{{ route('inicio') }}">Home </a></li>
-                    <li><a class="nav-link" href="{{ route('categoria') }}">Categoria</a></li>
-                    <li><a class="nav-link" href="{{ route('cadastro') }}">Cadastro</a></li>
+                    <li><a class="nav-link" href="{{ route('produtos.index') }}">Home </a></li>
+                    <li><a class="nav-link" href="{{ route('categorias.index') }}">Categoria</a></li>
+                    <li><a class="nav-link" href="{{ route('cadastro') }}">Cliente</a></li>
                      <li><a class="nav-link" href="{{ route('contato') }}">Contato</a></li>
+                    
                     <!--criar uma li para produtos-->
                      <!--<li><a class="nav-link">Produtos</a></li> -->
                 </ul>
             </div>
         </div>
-        <img class="carrinho" alt ="carrinho" src="imagens/carrinho.png">
-        <a alt="carrinho" href="#" class="btn btn-sm"><i class="fa fa-shopping-cart"></a>
+        <a alt="carrinho" href="#" class="btn btn-sm"><i class="fa fa-shopping-cart">
+            <img class="carrinho" alt ="carrinho" src="imagens/carrinho.png">
+        </a> 
     </nav>
     <div class="container">
-
+        
     
     </div>
         

@@ -16,6 +16,8 @@ class InsertProducts extends Migration
         //
         $cate = new \App\Models\Categoria(['categoria' => 'Geral']);
         $cate->save();//salvando a categoria
+        
+        
 
         //$produto = new \App\Models\Produto(['nome' => '','valor']);
         //adicionando no bd

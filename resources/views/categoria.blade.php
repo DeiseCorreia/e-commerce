@@ -3,29 +3,35 @@
  <h2>Categoria</h2>
 
 
- @if(isset($lscat) && count($lscat) > 0)
+ @foreach($categorias as $cat)
+         <li>{{ $cat->id}}</li>
+         <li><a href="{{ route('categorias.show' , "$cat->id") }}">{{ $cat->categoria}}</a></li>
+@endforeach
+@if(isset($queryprod) && count($queryprod) > 0)
       <ul>
-         @foreach($lscat as $cate)
+         @foreach($queryprod as $cate)
 
-            <li>{{ $categoria->categoria}}</li>
+            <li>{{ $cate->categoria }}</li></br>
          @endforeach
       </ul>
  @endif
 
- @if(isset($list) && count($list) > 0)
+ @if(isset($queryprod) && count($queryprod) > 0)
       <ul>
-         @foreach($list as $prod)
+         @foreach($queryprod as $prod)
             <li>{{ $prod->nome}}</li>
             
          @endforeach
       </ul>
 
  @endif
- <select >
+ --}}
+
+ <!--<select >
  <option>-</option>
     <option>Eletrônicos</option>
     <option>Celulares</option>
     <option>Celulares</option>
     <option>Celulares</option>
- </select>
+ </select>-->
 @endsection 

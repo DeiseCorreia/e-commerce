@@ -15,18 +15,35 @@ use App\Http\Controllers\ClienteController;
 |
 */
 
-Route::match(['get','post'] , '/', [ProdutoController::class, 'index'])//pode dar erro com o . de concatenação
-  ->name('inicio');
+//Route::match(['get','post'] , '/', [ProdutoController::class, 'index']);//pode dar erro com o . de concatenação
+  //->name('inicio');
+  Route::resource('/produtos', 'ProdutoController');
+  Route::resource('/categorias', 'CategoriaController');
 
-Route::match(['get','post'] , '/categoria', [ProdutoController::class, 'categoria'])//pode dar erro com o . de concatenação
-  ->name('categoria');
-  Route::match(['get','post'] , '{idcategoria}/categoria', [ProdutoController::class, 'categoria'])//pode dar erro com o . de concatenação
-  ->name('categoria_id');
+  
 
-Route::match(['get','post'] , '/cadastro', [ClienteController::class, 'cadastro'])//pode dar erro com o . de concatenação
-  ->name('cadastro');
-  Route::match(['get','post'] , '/contato', [ClienteController::class, 'contato'])//pode dar erro com o . de concatenação
-  ->name('contato');
+ // Route::resource('users', 'AdminUserController')->parameters([
+    //'users' => 'admin_user'
+  //]);//exemplo
+
+  //Route::resource('/categorias', 'ProdutoController')->names([
+    //'create' => 'index'
+ // ]);
+   // Route::post('/categorias','ProdutoController');
+  
+  //Route::match(['get','post'] , '/categoria', 
+  //[ProdutoController::class, 'categoria'])//pode dar erro com o . de concatenação
+   // ->name('categoria');
+ /* Route::match(['get','post'] , '{idcategoria}/categoria', 
+  [ProdutoController::class, 'categoria'])
+    ->name('categoria_id');
+*/ 
+  Route::match(['get','post'] , '/cadastro', 
+  [ClienteController::class, 'cadastro'])
+    ->name('cadastro');
+  Route::match(['get','post'] , '/contato', 
+  [ClienteController::class, 'contato'])
+    ->name('contato');
 //propriedade match(posso passar varios protocolos http)
   
 
@@ -36,7 +53,8 @@ Route::match(['get','post'] , '/cadastro', [ClienteController::class, 'cadastro'
 
 
   /*
-Route::get('/', function () {
+Route::get('/', function () { 
+ 
     return view('produtos');
 });
 
