@@ -58,13 +58,14 @@ img {
                     <li><a class="nav-link" href="{{ route('categorias.index') }}">Categoria</a></li>
                     <li><a class="nav-link" href="{{ route('cadastro') }}">Cliente</a></li>
                      <li><a class="nav-link" href="{{ route('contato') }}">Contato</a></li>
-                    
+                     <li><a class="nav-link" >Funcionario</a></li>
                     <!--criar uma li para produtos-->
                      <!--<li><a class="nav-link">Produtos</a></li> -->
                 </ul>
             </div>
         </div>
-        <a alt="carrinho" href="#" class="btn btn-sm"><i class="fa fa-shopping-cart">
+        <a alt="carrinho"  class="btn btn-sm"><i class="fa fa-shopping-cart"><!--carrinho.blade.php,criar uma rota 
+        para CarrinhoController para começar a funcionar-->
             <img class="carrinho" alt ="carrinho" src="imagens/carrinho.png">
         </a> 
     </nav>
